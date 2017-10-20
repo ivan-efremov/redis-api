@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2.2)
-project(counter)
+project(redis-api)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -17,6 +17,6 @@ file(GLOB SOURCE_TRIGGER "Trigger.cpp")
 
 set(SOURCE_FILES main.cpp)
 
-add_executable(counter ${SOURCE_FILES} ${SOURCE_REDIS} ${SOURCE_COUNTER} ${SOURCE_TRIGGER})
+add_executable(redis-api ${SOURCE_FILES} ${SOURCE_REDIS} ${SOURCE_COUNTER} ${SOURCE_TRIGGER})
 
-target_link_libraries(counter boost_system  pthread)
+target_link_libraries(redis-api boost_system  pthread)
